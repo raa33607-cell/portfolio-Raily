@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио — Мазитова Райля</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fdfdfc; color: #333;}
+    header {position: fixed; top: 0; left: 0; right: 0; background: #fff; display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); z-index: 1000;}
+    header nav a {margin: 0 15px; text-decoration: none; color: #333; font-weight: bold;}
+    header .lang-select select {padding: 5px; border-radius: 5px; border: 1px solid #ccc;}
+    section {padding: 100px 40px; max-width: 1000px; margin: auto;}
+    .hero {text-align: center; padding-top: 80px;}
+    .hero h1 {font-size: 2.5rem; margin-bottom: 10px;}
+    .hero h2 {font-size: 1.2rem; margin-bottom: 20px; color: #666;}
+    .hero .buttons a {display: inline-block; margin: 10px; padding: 12px 25px; background: #d4a373; color: white; text-decoration: none; border-radius: 8px;}
+    .about {display: flex; align-items: center; gap: 30px;}
+    .about img {max-width: 250px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);}
+    .skills {margin-top: 20px;}
+    .skills ul {list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 15px;}
+    .skills li {background: #eee; padding: 8px 15px; border-radius: 6px;}
+    .projects {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;}
+    .project-card {background: #fff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden;}
+    .project-card img {width: 100%; height: auto;}
+    .project-card .content {padding: 15px;}
+    .contact {text-align: center;}
+    .contact a {margin: 0 10px; text-decoration: none; font-size: 1.5rem;}
+    footer {text-align: center; padding: 20px; background: #eee;}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#about" data-lang="nav-about">Обо мне</a>
+      <a href="#projects" data-lang="nav-projects">Проекты</a>
+      <a href="#contact" data-lang="nav-contact">Контакты</a>
+    </nav>
+    <div class="lang-select">
+      <select id="languageSwitcher">
+        <option value="ru">RU</option>
+        <option value="en">EN</option>
+        <option value="kz">KZ</option>
+      </select>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1 data-lang="hero-name">Мазитова Райля</h1>
+    <h2 data-lang="hero-specialty">Специалист по AI-автоматизации и промт-инженерингу</h2>
+    <div class="buttons">
+      <a href="#projects" data-lang="btn-projects">Мои проекты</a>
+      <a href="#contact" data-lang="btn-contact">Связаться</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <img src="IMG_20240518_171254_947.jpg" alt="Мазитова Райля">
+    <div>
+      <h2 data-lang="about-title">Обо мне</h2>
+      <p data-lang="about-text">Я создаю креативные проекты с помощью AI-инструментов — от обучающих видео до визуального контента для социальных сетей. Моя цель — вдохновлять и показывать, как технологии могут упрощать жизнь и делать её ярче.</p>
+      <div class="skills">
+        <h3 data-lang="skills-title">Ключевые навыки и инструменты:</h3>
+        <ul>
+          <li>AI генерация (ChatGPT, Gemini)</li>
+          <li>AI видео (Google Veo, HeyGen)</li>
+          <li>Монтаж (Movavi Video Editor)</li>
+          <li>Озвучка (FreeReadText)</li>
+          <li>Стоковые материалы (Pexels)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 data-lang="projects-title">Проекты</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="thumbs/science-space.jpg" alt="Наука и космос">
+        <div class="content">
+          <h3>Наука и космос</h3>
+          <p data-lang="proj1-desc">Создала видеоролик на тему "Наука и космос" с использованием AI-сцен, стоковых кадров и озвучки. Монтаж в Movavi Video Editor.</p>
+          <video src="projects/science-space.mp4" controls></video>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="thumbs/science-space-2.jpg" alt="Наука и космос 2">
+        <div class="content">
+          <h3>Наука и космос 2</h3>
+          <p data-lang="proj2-desc">Создала повторный видеоролик "Наука и космос 2" с новыми AI-сценами и инструментами (ChatGPT, Gemini). Озвучка и монтаж с добавлением аудио.</p>
+          <video src="projects/science-space-2.mp4" controls></video>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="thumbs/budget-503020.jpg" alt="Бюджет 50/30/20">
+        <div class="content">
+          <h3>Правило 50/30/20</h3>
+          <p data-lang="proj3-desc">Создала обучающее микро-видео с AI-аватаром на тему управления бюджетом (50/30/20). Подходит для соцсетей и блога.</p>
+          <video src="projects/budget-503020.mp4" controls></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 data-lang="contact-title">Контакты</h2>
+    <p data-lang="contact-text">Давайте создавать будущее вместе! 🚀</p>
+    <a href="mailto:mrailu@mail.ru">📧</a>
+    <a href="https://t.me/Mrailu">💬</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Мазитова Райля</p>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        "nav-about": "About",
+        "nav-projects": "Projects",
+        "nav-contact": "Contact",
+        "hero-name": "Mazhitova Raylia",
+        "hero-specialty": "AI Automation & Prompt Engineering Specialist",
+        "btn-projects": "My Projects",
+        "btn-contact": "Contact Me",
+        "about-title": "About Me",
+        "about-text": "I create inspiring projects using AI tools – from educational videos to visual content for social media. My goal is to inspire and show how technology makes life easier and brighter.",
+        "skills-title": "Key Skills & Tools:",
+        "projects-title": "Projects",
+        "proj1-desc": "Created a video 'Science & Space' with AI-generated scenes, stock footage, and voiceover. Edited in Movavi Video Editor.",
+        "proj2-desc": "Created a second video 'Science & Space 2' using AI (ChatGPT, Gemini), voiceover, and audio editing.",
+        "proj3-desc": "Created a short AI-avatar educational video on budgeting rule 50/30/20 for social media.",
+        "contact-title": "Contacts",
+        "contact-text": "Let's create the future together! 🚀"
+      },
+      kz: {
+        "nav-about": "Мен туралы",
+        "nav-projects": "Жобалар",
+        "nav-contact": "Байланыс",
+        "hero-name": "Мажитова Райля",
+        "hero-specialty": "AI автоматтандыру және промт-инжиниринг маманы",
+        "btn-projects": "Менің жобаларым",
+        "btn-contact": "Байланысу",
+        "about-title": "Мен туралы",
+        "about-text": "Мен AI құралдарының көмегімен шығармашылық жобалар жасаймын — білім беру видеоларынан бастап әлеуметтік желілерге арналған контентке дейін. Мақсатым — шабыт беру және технологияның өмірді қалай жеңіл әрі жарқын ететінін көрсету.",
+        "skills-title": "Негізгі дағдылар мен құралдар:",
+        "projects-title": "Жобалар",
+        "proj1-desc": "'Ғылым және ғарыш' тақырыбында видео жасадым. AI генерациясы, сток кадрлар және дыбыстау қолданылды. Монтаж Movavi-де.",
+        "proj2-desc": "'Ғылым және ғарыш 2' видеосын жасадым. ChatGPT, Gemini қолданылды, дыбыстау және монтаж қосылды.",
+        "proj3-desc": "Әлеуметтік желілерге арналған '50/30/20 ережесі' тақырыбында 3 минуттық AI-аватар оқыту видеосын жасадым.",
+        "contact-title": "Байланыс",
+        "contact-text": "Кел, болашақты бірге жасайық! 🚀"
+      }
+    };
+
+    const switcher = document.getElementById("languageSwitcher");
+    const elements = document.querySelectorAll("[data-lang]");
+
+    switcher.addEventListener("change", () => {
+      const lang = switcher.value;
+      elements.forEach(el => {
+        const key = el.getAttribute("data-lang");
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    });
+  </script>
+</body>
+</html>
